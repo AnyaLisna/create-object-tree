@@ -23,13 +23,13 @@ function createTree(container, data) {
 
   Object.keys(data).forEach(function(key){
       
-    if(key.hasOwnProperty) {
+    if(Object.keys(data).length) {
       const li = document.createElement('li');
       const ul = document.createElement('ul');
       li.appendChild(document.createTextNode(key));
       container.appendChild(li);
 
-      if(data[key].hasOwnProperty) {
+      if(Object.keys(data[key]).length) {
         li.appendChild(ul);
       }
 
